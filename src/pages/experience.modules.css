@@ -1,0 +1,119 @@
+div.edu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.exp-edu-tabs {
+  width: 70%;
+}
+.experience {
+  display: flex;
+  flex-direction: row;
+  height: 94.5vh;
+  width: 100vw;
+  /* flex-wrap: wrap; */
+}
+
+div.edu > div,
+div.exp-tab > div {
+  width: 80%;
+}
+
+div.exp-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+div h3 {
+  font-size: var(--h3fontWeight);
+  color: var(--h3fontColor);
+}
+p {
+  font-size: var(--pfontWeight);
+  color: var(--pfontColor);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+span.edu-lvl {
+  font-size: 1.2rem;
+  display: block;
+  color: var(--greenHighlight);
+}
+/* tab2 */
+.tech-work {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.tech-work > div {
+  display: flex;
+  flex-direction: column;
+}
+.tech-work h5 {
+  display: inline-block;
+}
+.tech-work p {
+  font-size: 10px;
+  display: inline-block;
+}
+.tech-work i.fab {
+  animation: skill 5s;
+  animation-iteration-count: infinite;
+}
+.tech-work i.fab:hover {
+  animation-iteration-count: 0;
+}
+@keyframes skill {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+h2 {
+  color: var(--nav-linksColor);
+  text-align: center;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 3px;
+  font-size: 30px;
+  margin: 37px;
+}
+#rundol {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+@media screen and (max-width: 768px) {
+  .experience {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+  .tech-work {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 25px;
+    gap: 25px;
+  }
+  .experience {
+    height: 110vh;
+  }
+  div.edu > div,
+  div.exp-tab > div {
+    width: 100%;
+  }
+  .exp-edu-tabs {
+    width: 100%;
+  }
+}

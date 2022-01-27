@@ -1,13 +1,60 @@
+:root {
+  --nav-linksColor: #05386b;
+  --background-Color: #5cdb95;
+  --WhiteHeading: #ffffff;
+  --greenHighlight: #05386b;
+  /* Experince Variables */
+  --h3fontWeight: 20px;
+  --h3fontColor: #ffffff;
+  --pfontWeight: 20px;
+  --pfontColor: black;
+}
+[data-theme="dark"] {
+  --nav-linksColor: #84ba64;
+  --background-Color: #292424;
+  --WhiteHeading: #f8f7f7;
+  --greenHighlight: #84ba64;
+  /* Experince Variables */
+  --h3fontWeight: 20px;
+  --h3fontColor: #fbf9f9;
+  --pfontWeight: 15px;
+  --pfontColor: rgb(238, 105, 105);
+}
+i {
+  color: var(--WhiteHeading);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  overflow-x: hidden;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@media screen and (min-width: 325px) {
+  div.cv-download {
+    /* width: 30%; */
+    /* height: 50px; */
+    background-color: black;
+    border: 2px solid white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(250, 250, 248);
+    box-shadow: 5px 7px 5px black;
+    text-align: center;
+  }
+}
+/*  */
