@@ -20,11 +20,15 @@
   --pfontWeight: 15px;
   --pfontColor: rgb(238, 105, 105);
 }
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 i {
   color: var(--WhiteHeading);
 }
 body {
-  margin: 0;
   overflow-x: hidden;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -33,11 +37,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

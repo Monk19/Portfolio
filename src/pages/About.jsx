@@ -60,54 +60,27 @@ export const About = (props) => {
 
     setChange((prev) => !prev);
   };
-  useEffect(() => {
-    if (right > w || left > w || bottom > h || top > h) {
-      setRight(Math.random() * 1400);
-      setLeft(Math.random() * 1400);
-      setTop(Math.random() * 800);
-      setBottom(Math.random() * 800);
-    }
-    setRight((prev) => prev + 10);
-    setLeft((prev) => prev + 10);
-    setTop((prev) => prev + 2);
-    setBottom((prev) => prev + 0);
-    setTimeout(() => {
-      setChange((prev) => !prev);
-    }, 500);
-  }, [change]);
+
   return (
     <div className="about" id="about">
       <div className="me">
-        <img
-          src="https://www.animatedimages.org/data/media/202/animated-dog-image-0175.gif"
-          border="0"
-          alt="animated-dog-image-0175"
-          className="rundol"
-          id="rundol"
-          onClick={runChange}
-          style={{
-            position: "absolute",
-            inset: `${top}px ${left}px`,
-            transform: ` rotate(${Math.tan(left ** 2 / top ** 2)}deg)`,
-          }}
-          onMouseOver={runChange}
-        />
+       
         <div>
-          <h1>
-            <h1 className="greenhighligh">
-              {index === 0
-                ? `${words[index].substring(0, subIndex)}${blink ? "|" : " "}`
-                : ""}
-            </h1>
+          <h1 className="greenhighligh">
+            {index === 0
+              ? `${words[index].substring(0, subIndex)}${blink ? "|" : " "}`
+              : ""}
+          </h1>
+          <h1 className="intro-text">
             {index === 1
               ? `${words[index].substring(0, subIndex)}${blink ? "|" : " "}`
               : ""}
           </h1>
-          <div className="cv-download">
-            <a href={require("../Assets/cv/Ravi.pdf")} download="myFile">
-              Download cv <i className="fas fa-file-download"></i>
-            </a>
-          </div>
+        </div>
+        <div className="cv-download">
+          <a href={require("../Assets/cv/Ravi.pdf")} download="myFile">
+            Download cv
+          </a>
         </div>
       </div>
     </div>

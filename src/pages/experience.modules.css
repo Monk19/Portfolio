@@ -30,12 +30,12 @@ div.exp-tab {
 div h3 {
   font-size: var(--h3fontWeight);
   color: var(--h3fontColor);
+  font-family: "Fredoka", sans-serif;
 }
-p {
-  font-size: var(--pfontWeight);
-  color: var(--pfontColor);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+progress {
+  z-index: 1;
 }
+
 span.edu-lvl {
   font-size: 1.2rem;
   display: block;
@@ -53,28 +53,30 @@ span.edu-lvl {
   display: flex;
   flex-direction: column;
 }
-.tech-work h5 {
-  display: inline-block;
+/* progree bar */
+progress::-webkit-progress-value {
+  background: rgb(15, 15, 15);
 }
-.tech-work p {
-  font-size: 10px;
-  display: inline-block;
+.progress-bar {
+  background-color: rgb(161, 37, 37);
+  border-radius: 2px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+  width: 250px;
+  height: 20px;
+
+  position: relative;
+  display: block;
 }
-.tech-work i.fab {
-  animation: skill 5s;
-  animation-iteration-count: infinite;
+
+.progress-bar > span {
+  background-color: blue;
+  border-radius: 2px;
+
+  display: block;
+  text-indent: -9999px;
 }
-.tech-work i.fab:hover {
-  animation-iteration-count: 0;
-}
-@keyframes skill {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
+/* progress bar end */
 h2 {
   color: var(--nav-linksColor);
   text-align: center;

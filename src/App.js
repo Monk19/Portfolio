@@ -1,12 +1,12 @@
 import "./App.css";
-import { useState, React } from "react";
+import { useState, React, useEffect } from "react";
 import mk from "./Assets/Images/circus-monkey-svgrepo-com.svg";
-import { Link, Routes, Route, useNavigate } from "react-router-dom";
+import { NavLink as Link, Routes, Route, useNavigate } from "react-router-dom";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import useLocalStorage from "use-local-storage";
-
 function App() {
+  const [active, setActive] = useState(1);
   const ThemePrefered = window.matchMedia(
     "(prefers-color-scheme:dark)"
   ).matches;
@@ -14,31 +14,82 @@ function App() {
     "theme",
     ThemePrefered ? "dark" : "light"
   );
+  
+
   const swithTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
+  };
+  const activeStatus = (x) => {
+    setActive(x);
+    console.log("click");
   };
   return (
     <div className="App" data-theme={theme}>
       <div className="Navigation">
         <div className="header-center">
-          <div class="Logo">
-            <img src={mk} alt="mylogo" className="mk"></img>
-          </div>
+          <div class="Logo">{/* <h6>R</h6> */}</div>
           <div class="Navigation-links">
-            <Link to="/">About</Link>
-            <Link to="/experience">Education&Experiece</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/contact">Contat Me</Link>
-            <button onClick={swithTheme}>
-              Switch to{theme === "light" ? "dark" : "light"}
-            </button>
+            <Link
+              className={`Active ${active === 1 ? " act" : ""}`}
+              onClick={() => {
+                activeStatus(1);
+              }}
+              to="/"
+            >
+              About
+            </Link>
+            <Link
+              className={`Active ${active === 2 ? " act" : ""}`}
+              onClick={() => {
+                activeStatus(2);
+              }}
+              to="/experience"
+            >
+              Education&Experiece
+            </Link>
+            <Link
+              className={`Active ${active === 3 ? " act" : ""}`}
+              onClick={() => {
+                activeStatus(3);
+              }}
+              to="/projects"
+            >
+              Projects
+            </Link>
+            <Link
+              className={`Active ${active === 4 ? " act" : ""}`}
+              onClick={() => {
+                activeStatus(4);
+              }}
+              to="/contact"
+            >
+              Contat Me
+            </Link>
+          </div>
+          <div className="darMode">
+            {theme === "light" ? (
+              <i
+                className="fas fa-sun"
+                onClick={swithTheme}
+                data-toggle="tooltip"
+                title="too much sun"
+              ></i>
+            ) : (
+              <i
+                className="fas fa-moon"
+                data-toggle="tooltip"
+                title="get vitamin D"
+                onClick={swithTheme}
+              ></i>
+            )}
           </div>
         </div>
       </div>
       <Routes>
         <Route path="/" element={<About animate={true} />} />
         <Route path="/experience" element={<Experience animate={true} />} />
+        <Route path="experience" element={<h1></h1>} />
       </Routes>
     </div>
   );

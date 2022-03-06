@@ -1,6 +1,58 @@
+import react from "react";
 import { useState, useEffect } from "react";
 import "./experience.modules.css";
 function Experience() {
+  const [skillValue, setSkillValue] = useState({
+    html: 0,
+    react: 0,
+    node: 0,
+    css: 0,
+  });
+
+  useEffect(() => {
+    if (skillValue.react == 62) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, react: prev.react + 1 }));
+      }, 5);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.react]);
+  useEffect(() => {
+    if (skillValue.html == 89) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, html: prev.html + 1 }));
+      }, 5);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.html]);
+  useEffect(() => {
+    if (skillValue.css == 62) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, css: prev.css + 1 }));
+      }, 10);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.css]);
+  useEffect(() => {
+    if (skillValue.node == 77) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, node: prev.node + 1 }));
+      }, 5);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.node]);
   return (
     <div className="experience" id="experience">
       <div className="exp-edu-tabs">
@@ -55,27 +107,24 @@ function Experience() {
           Tech I Know<i class="fas fa-layer-group"></i>
         </h2>
 
+        <progress value={skillValue.react} max="100">
+          <div className="progress-bar">
+            <span>Progress: 80%</span>
+          </div>
+        </progress>
 
-        <div>
-          <i class="fab fa-html5"></i>
-          <p>Html 5</p>
-        </div>
-        <div>
-          <i class="fab fa-node"></i>
+        <progress value={skillValue.node} max="100">
           <p>nodejs</p>
-        </div>
-        <div>
-          <i class="fab fa-react"></i>
+        </progress>
+        <progress value={skillValue.css} max="100">
           <p>Reactjs</p>
-        </div>
-        <div>
-          <i class="fab fa-bootstrap"></i>
+        </progress>
+        <progress value={skillValue.html} max="100">
           <p>Bootstrap</p>
-        </div>
-        <div>
-          <i class="fab fa-react"></i>
+        </progress>
+        <progress value={skillValue.css} max="100">
           <p>Javascript</p>
-        </div>
+        </progress>
       </div>
     </div>
   );
