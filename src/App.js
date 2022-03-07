@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import useLocalStorage from "use-local-storage";
 import Projects from "./pages/ProjectsComponent/Projects";
+import Contact from "./pages/Contact/Contact";
 function App() {
   const [active, setActive] = useState(1);
   const ThemePrefered = window.matchMedia(
@@ -131,6 +132,7 @@ function App() {
         <Route path="/" element={<About animate={true} />} />
         <Route path="/experience" element={<Experience animate={true} />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );

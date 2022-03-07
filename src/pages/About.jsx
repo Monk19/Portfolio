@@ -78,10 +78,9 @@ export const About = (props) => {
         </div>
         <div className="social-icons">
           <i className="fab fa-linkedin"></i>
-          <span className="vertical-line"></span>
           <i className="fab fa-github"></i>
-          <span className="vertical-line"></span>
-          <i className="fal fa-envelope-open"></i>
+          <i class="fas fa-envelope"></i> <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
         </div>
         <div className="cv-download">
           <a href={require("../Assets/cv/Ravi.pdf")} download="myFile">

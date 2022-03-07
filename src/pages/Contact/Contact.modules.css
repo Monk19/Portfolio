@@ -1,0 +1,12 @@
+.connect {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

@@ -1,11 +1,13 @@
 div.projects-component {
-  color: rgb(204, 32, 32);
+  height: 90vh;
+  width: 100%;
 }
+
 .project-menu {
   display: flex;
   margin-top: 30px;
+  padding: 20px;
   gap: 30px;
-  height: 90vh;
 }
 .project-menu > div {
   position: relative;
@@ -31,30 +33,19 @@ div.projects-component {
   justify-content: space-around;
   font-family: "Inconsolata", monospace;
   color: #64ffda;
-
   border-radius: 5px;
   flex-direction: row;
-}
-.disc {
-  position: absolute;
-  visibility: hidden;
-  width: 100%;
-  height: 0%;
-  top: 60px;
-  left: 30px;
-  opacity: 0;
-  background-color: rgb(47, 47, 47);
-  transition: all 0.5s ease-in;
-}
-.project-menu > div:hover > div.disc {
-  visibility: visible;
-  width: 100%;
-  height: 80%;
-  opacity: 1;
 }
 
 h2 {
   color: white;
 }
 @media screen and (max-width: 756px) {
+  .project-menu {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .project-menu > div {
+    width: 100%;
+  }
 }
