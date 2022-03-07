@@ -1,11 +1,9 @@
 .App {
   text-align: center;
-  background-color: var(--background-Color);
+  /* background-color: var(--background-Color); */
+  background-color: rgba(24, 21, 21, 0.863);
 }
-input {
-  display: block;
-  text-align: center;
-}
+
 .auth {
   background-color: cornflowerblue;
   color: rgb(248, 245, 245);
@@ -16,56 +14,145 @@ input {
 body {
   width: 100%;
   height: 100%;
-  background-color: var(--background-Color);
+  background-color: rgba(24, 21, 21, 0.863);
+
+  /* background-color: var(--background-Color); */
 }
 
-.header-center {
+/* .header-center {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-}
+} */
 .Navigation-links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
 }
+
 .Navigation a {
   padding: 11px;
   text-decoration: none;
-  color: var(--nav-linksColor);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
+  color: rgb(247, 248, 248);
+  font-family: "Inconsolata", monospace; /* font-size: 10px; */
+  /* font-weight: 300; */
 }
-a.Active:hover {
+*/ a.Active:hover {
   border-bottom: 2px solid rgb(243, 242, 242);
 }
 a.act {
   border-bottom: 2px solid rgb(218, 63, 63) !important;
 }
-
-.mk {
-  max-width: 100%;
-  max-height: 100%;
-  /* top: 10px; */
-  animation: mk 2s ease-out infinite;
-  position: relative;
-  transform: rotate(0deg);
-}
-@keyframes mk {
-  from {
-    top: 0px;
-    transform: rotate(0deg);
-  }
-  to {
-    /* top: 7px; */
-    transform: rotate(20deg);
-  }
-}
+/* Hammenu*/
 
 .Navigation {
-  height: 100%;
-  width: 100%;
-  color: rgb(250, 249, 249);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  /* border: 2px solid black; */
+}
+.Navigation .toggler {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  opacity: 0;
+}
+.Navigation div.hamburger {
+  position: absolute;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  opacity: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Navigation .hamburger > div {
+  position: relative;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.Navigation .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 70%;
+  height: 2px;
+  background-color: rgb(251, 250, 250);
+  transition: all 0.4s ease;
+}
+.Navigation .hamburger > div:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 70%;
+  height: 2px;
+  transition: all 0.4s ease;
+  background-color: rgb(251, 250, 250);
+}
+
+.Navigation .hamburger > div:before {
+  top: 10px;
+}
+/* Toggler nimate */
+.Navigation .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+.Navigation .toggler:checked + .hamburger > div:before,
+.Navigation .toggler:checked + .hamburger > div:after {
+  top: 0px;
+  transform: rotate(90deg);
+  /* background-color: black; */
+}
+
+.Navigation .toggler:checked:hover + .hamburger > div {
+  transform: rotate(335deg);
+}
+.Navigation-container {
+  visibility: hidden;
+}
+.Navigation .toggler:checked .Navigation-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.Navigation .toggler:checked ~ .Navigation-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 30px;
+  background-color: rgba(24, 21, 21, 0.863);
+  transition: all 0.4s ease;
+}
+.Navigation .toggler:checked ~ .Navigation-container,
+.Navigation
+  .toggler:checked
+  ~ .Navigation
+  .toggler:checked
+  ~ .Navigation-container {
+  visibility: visible !important;
+}
+@media screen and (max-width: 767px) {
+  .Navigation-links-phone {
+    visibility: hidden;
+  }
 }

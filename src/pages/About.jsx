@@ -64,7 +64,6 @@ export const About = (props) => {
   return (
     <div className="about" id="about">
       <div className="me">
-       
         <div>
           <h1 className="greenhighligh">
             {index === 0
@@ -76,6 +75,13 @@ export const About = (props) => {
               ? `${words[index].substring(0, subIndex)}${blink ? "|" : " "}`
               : ""}
           </h1>
+        </div>
+        <div className="social-icons">
+          <i className="fab fa-linkedin"></i>
+          <span className="vertical-line"></span>
+          <i className="fab fa-github"></i>
+          <span className="vertical-line"></span>
+          <i className="fal fa-envelope-open"></i>
         </div>
         <div className="cv-download">
           <a href={require("../Assets/cv/Ravi.pdf")} download="myFile">

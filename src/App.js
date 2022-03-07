@@ -5,6 +5,7 @@ import { NavLink as Link, Routes, Route, useNavigate } from "react-router-dom";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import useLocalStorage from "use-local-storage";
+import Projects from "./pages/ProjectsComponent/Projects";
 function App() {
   const [active, setActive] = useState(1);
   const ThemePrefered = window.matchMedia(
@@ -14,7 +15,6 @@ function App() {
     "theme",
     ThemePrefered ? "dark" : "light"
   );
-  
 
   const swithTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -26,10 +26,51 @@ function App() {
   };
   return (
     <div className="App" data-theme={theme}>
-      <div className="Navigation">
-        <div className="header-center">
-          <div class="Logo">{/* <h6>R</h6> */}</div>
-          <div class="Navigation-links">
+      <div className="Navigation-links-phone">
+        <Link
+          className={`Active ${active === 1 ? " act" : ""}`}
+          onClick={() => {
+            activeStatus(1);
+          }}
+          to="/"
+        >
+          About
+        </Link>
+        <Link
+          className={`Active ${active === 2 ? " act" : ""}`}
+          onClick={() => {
+            activeStatus(2);
+          }}
+          to="/experience"
+        >
+          Education&Experiece
+        </Link>
+        <Link
+          className={`Active ${active === 3 ? " act" : ""}`}
+          onClick={() => {
+            activeStatus(3);
+          }}
+          to="/projects"
+        >
+          Projects
+        </Link>
+        <Link
+          className={`Active ${active === 4 ? " act" : ""}`}
+          onClick={() => {
+            activeStatus(4);
+          }}
+          to="/contact"
+        >
+          Contat Me
+        </Link>
+      </div>
+      <nav className="Navigation">
+        <input type="checkbox" className="toggler" />
+        <div className="hamburger">
+          <div></div>
+        </div>
+        <div className="Navigation-container">
+          <div className="Navigation-links">
             <Link
               className={`Active ${active === 1 ? " act" : ""}`}
               onClick={() => {
@@ -67,7 +108,7 @@ function App() {
               Contat Me
             </Link>
           </div>
-          <div className="darMode">
+          {/* <div className="darMode">
             {theme === "light" ? (
               <i
                 className="fas fa-sun"
@@ -83,13 +124,13 @@ function App() {
                 onClick={swithTheme}
               ></i>
             )}
-          </div>
+          </div> */}
         </div>
-      </div>
+      </nav>
       <Routes>
         <Route path="/" element={<About animate={true} />} />
         <Route path="/experience" element={<Experience animate={true} />} />
-        <Route path="experience" element={<h1></h1>} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </div>
   );
