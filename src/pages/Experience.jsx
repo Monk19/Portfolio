@@ -55,6 +55,31 @@ function Experience() {
   }, [skillValue.node]);
   return (
     <div className="experience" id="experience">
+      <div>
+        <h2 className="page-identifier">
+          Experience <i class="fas fa-layer-group"></i>
+        </h2>
+
+        <div className="exp-tab">
+          <div>
+            <h3>Appstek Corp</h3>
+            <p>Web Developer</p>
+            <ul>
+              <li>Developing Website using HTML,Css,Bootstrap.</li>
+              <li>
+                Developing react applications and designing reusable components.
+              </li>
+              <li>Search Engine Optimization.</li>
+              <li>Nodejs Developement desiging sustinable backend.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="tech-work">
+        <h2 className="page-identifier">
+          Tech I Know<i class="fas fa-layer-group"></i>
+        </h2>
+      </div>
       <div className="exp-edu-tabs">
         <h2 className="page-identifier">
           Education <i class="fas fa-book-reader"></i>
@@ -82,49 +107,6 @@ function Experience() {
             <p>Worked on webapplications made using Reactjs and Nodejs</p>
           </div>
         </div>
-
-        <h2 className="page-identifier">
-          Experience <i class="fas fa-layer-group"></i>
-        </h2>
-
-        <div className="exp-tab">
-          <div>
-            <h3>Appstek Corp</h3>
-            <p>Web Developer</p>
-            <ul>
-              <li>Developing Website using HTML,Css,Bootstrap.</li>
-              <li>
-                Developing react applications and designing reusable components.
-              </li>
-              <li>Search Engine Optimization.</li>
-              <li>Nodejs Developement desiging sustinable backend.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="tech-work">
-        <h2 className="page-identifier">
-          Tech I Know<i class="fas fa-layer-group"></i>
-        </h2>
-
-        <progress value={skillValue.react} max="100">
-          <div className="progress-bar">
-            <span>Progress: 80%</span>
-          </div>
-        </progress>
-
-        <progress value={skillValue.node} max="100">
-          <p>nodejs</p>
-        </progress>
-        <progress value={skillValue.css} max="100">
-          <p>Reactjs</p>
-        </progress>
-        <progress value={skillValue.html} max="100">
-          <p>Bootstrap</p>
-        </progress>
-        <progress value={skillValue.css} max="100">
-          <p>Javascript</p>
-        </progress>
       </div>
     </div>
   );

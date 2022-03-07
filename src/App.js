@@ -27,7 +27,7 @@ function App() {
   };
   return (
     <div className="App" data-theme={theme}>
-      <div className="Navigation-links-phone">
+      {/* <div className="Navigation-links-phone">
         <Link
           className={`Active ${active === 1 ? " act" : ""}`}
           onClick={() => {
@@ -64,7 +64,7 @@ function App() {
         >
           Contat Me
         </Link>
-      </div>
+      </div> */}
       <nav className="Navigation">
         <input type="checkbox" className="toggler" />
         <div className="hamburger">
