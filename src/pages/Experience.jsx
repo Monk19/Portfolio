@@ -7,10 +7,14 @@ function Experience() {
     react: 0,
     node: 0,
     css: 0,
+    python: 0,
+    javascript: 0,
+    express: 0,
+    bootstrap: 0,
   });
 
   useEffect(() => {
-    if (skillValue.react == 62) {
+    if (skillValue.react == 68) {
       return;
     } else {
       const id = setInterval(() => {
@@ -21,7 +25,53 @@ function Experience() {
     }
   }, [skillValue.react]);
   useEffect(() => {
-    if (skillValue.html == 89) {
+    if (skillValue.bootstrap == 73) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, bootstrap: prev.bootstrap + 1 }));
+      }, 5);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.bootstrap]);
+
+  useEffect(() => {
+    if (skillValue.javascript == 72) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, javascript: prev.javascript + 1 }));
+      }, 5);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.javascript]);
+  useEffect(() => {
+    if (skillValue.express == 57) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, express: prev.express + 1 }));
+      }, 5);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.express]);
+  useEffect(() => {
+    if (skillValue.python == 65) {
+      return;
+    } else {
+      const id = setInterval(() => {
+        setSkillValue((prev) => ({ ...prev, python: prev.python + 1 }));
+      }, 5);
+      console.log("cleanup");
+      return () => clearInterval(id);
+    }
+  }, [skillValue.python]);
+
+  useEffect(() => {
+    if (skillValue.html == 95) {
       return;
     } else {
       const id = setInterval(() => {
@@ -32,7 +82,7 @@ function Experience() {
     }
   }, [skillValue.html]);
   useEffect(() => {
-    if (skillValue.css == 62) {
+    if (skillValue.css == 78) {
       return;
     } else {
       const id = setInterval(() => {
@@ -43,7 +93,7 @@ function Experience() {
     }
   }, [skillValue.css]);
   useEffect(() => {
-    if (skillValue.node == 77) {
+    if (skillValue.node == 60) {
       return;
     } else {
       const id = setInterval(() => {
@@ -79,6 +129,87 @@ function Experience() {
         <h2 className="page-identifier">
           Tech I Know<i class="fas fa-layer-group"></i>
         </h2>
+        <div className="progress-grid">
+          <div>
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.html}%`,
+                }}
+              >
+                html {skillValue.html}%
+              </div>
+            </div>
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.css}%`,
+                }}
+              >
+                css {skillValue.css}%
+              </div>
+            </div>
+
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.bootstrap}%`,
+                }}
+              >
+                Bootstrap {skillValue.bootstrap}%
+              </div>
+            </div>
+
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.javascript}%`,
+                }}
+              >
+                javascript {skillValue.javascript}%
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.react}%`,
+                }}
+              >
+                React {skillValue.react}%
+              </div>
+            </div>
+
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.express}%`,
+                }}
+              >
+                expressja {skillValue.express}%
+              </div>
+            </div>
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.node}%`,
+                }}
+              >
+                Nodejs {skillValue.node}%
+              </div>
+            </div>
+            <div className="progress-bar">
+              <div
+                style={{
+                  width: `${skillValue.python}%`,
+                }}
+              >
+                python{skillValue.python}%
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="exp-edu-tabs">
         <h2 className="page-identifier">

@@ -9,9 +9,9 @@ div.edu {
 }
 .experience {
   display: flex;
-  flex-direction: row;
-  height: 94.5vh;
-  width: 100vw;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100vw;
   /* flex-wrap: wrap; */
 }
 
@@ -26,6 +26,9 @@ div.exp-tab {
   align-items: center;
   gap: 20px;
 }
+.exp-tab li {
+  list-style-type: none;
+}
 
 div h3 {
   font-size: var(--h3fontWeight);
@@ -34,6 +37,26 @@ div h3 {
 }
 progress {
   z-index: 1;
+}
+/* progree Bar */
+.progress-bar {
+  position: relative;
+  color: rgb(196, 216, 211);
+  border-radius: 10px;
+  font-size: 20px;
+  /* font-weight: bold; */
+  height: 30px;
+  width: 35vw;
+}
+.progress-bar div {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 6px 5px 10px #295429;
+
+  /* border-top: 2px solid rgb(248, 246, 246); */
+  border: 2px solid rgba(255, 251, 251, 0.794);
+
+  /* 6px 15px 1px #295429; */
 }
 
 span.edu-lvl {
@@ -47,11 +70,15 @@ span.edu-lvl {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  /* gap: 25px; */
 }
-.tech-work > div {
+/* .tech-work > div {
   display: flex;
   flex-direction: column;
+} */
+.progress-grid {
+  display: flex;
+  flex-direction: row;
 }
 li,
 p {
@@ -82,13 +109,23 @@ h2 {
   .tech-work {
     font-size: 3rem;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    grid-gap: 25px;
-    gap: 25px;
+    /* gap: 25px; */
+  }
+  .progress-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .progress-grid > div > div {
+    padding: 20px;
+  }
+  .progress-bar {
+    width: 90vw;
   }
   .experience {
-    height: 110vh;
+    height: 160vh;
+    width: 100vw;
   }
   div.edu > div,
   div.exp-tab > div {
