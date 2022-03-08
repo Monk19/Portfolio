@@ -104,32 +104,31 @@ h2 {
   .experience {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
+    height: 250vh;
+    width: 100vw;
+    flex-wrap: wrap;
   }
   .tech-work {
     font-size: 3rem;
     display: flex;
     align-items: center;
+
     /* gap: 25px; */
   }
   .progress-grid {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 70vh;
   }
-  .progress-grid {
-    height: 500px;
-  }
+
   .progress-grid > div > div {
     padding: 20px;
   }
   .progress-bar {
     width: 90vw;
   }
-  .experience {
-    height: 160vh;
-    width: 100vw;
-  }
+
   div.edu > div,
   div.exp-tab > div {
     width: 100%;
