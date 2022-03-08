@@ -117,6 +117,9 @@ h2 {
     flex-direction: column;
     gap: 10px;
   }
+  .progress-grid {
+    height: 500px;
+  }
   .progress-grid > div > div {
     padding: 20px;
   }
