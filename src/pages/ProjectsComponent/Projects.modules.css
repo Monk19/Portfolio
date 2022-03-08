@@ -42,7 +42,10 @@ h2 {
   color: white;
 }
 @media screen and (max-width: 756px) {
-  h1
+  h1 {
+    width: 400px;
+    text-align: center;
+  }
   div.projects-component {
     height: 170vh;
   }
