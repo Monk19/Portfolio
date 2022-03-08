@@ -37,11 +37,11 @@ body {
   font-family: "Inconsolata", monospace; /* font-size: 10px; */
   /* font-weight: 300; */
 }
-*/ a.Active:hover {
-  border-bottom: 2px solid rgb(243, 242, 242);
+a.Active:hover {
+  border-bottom: 2px solid rgb(242, 243, 242);
 }
 a.act {
-  border-bottom: 2px solid rgb(218, 63, 63) !important;
+  border-bottom: 2px solid rgb(81, 218, 63) !important;
 }
 /* Hammenu*/
 
