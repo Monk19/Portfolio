@@ -4,7 +4,7 @@ function Projects() {
   return (
     <div className="projects-component">
       <div className="project-menu">
-        <h1>Projects</h1>
+        <h2>Projects</h2>
         <div>
           <div className="head">
             <span>Nechophse Nerf</span>
