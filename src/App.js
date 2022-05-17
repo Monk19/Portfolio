@@ -9,6 +9,7 @@ import Projects from "./pages/ProjectsComponent/Projects";
 import Contact from "./pages/Contact/Contact";
 function App() {
   const [active, setActive] = useState(1);
+  const [toggleHam, settoggleHam] = useState(false);
   const ThemePrefered = window.matchMedia(
     "(prefers-color-scheme:dark)"
   ).matches;
@@ -66,7 +67,14 @@ function App() {
         </Link>
       </div> */}
       <nav className="Navigation">
-        <input type="checkbox" className="toggler" />
+        <input
+          type="checkbox"
+          className="toggler"
+          checked={toggleHam}
+          onClick={() => {
+            settoggleHam(!toggleHam);
+          }} 
+        />
         <div className="hamburger">
           <div></div>
         </div>
@@ -76,6 +84,7 @@ function App() {
               className={`Active ${active === 1 ? " act" : ""}`}
               onClick={() => {
                 activeStatus(1);
+                settoggleHam(!toggleHam);
               }}
               to="/"
             >
@@ -85,6 +94,7 @@ function App() {
               className={`Active ${active === 2 ? " act" : ""}`}
               onClick={() => {
                 activeStatus(2);
+                settoggleHam(!toggleHam);
               }}
               to="/experience"
             >
@@ -94,6 +104,7 @@ function App() {
               className={`Active ${active === 3 ? " act" : ""}`}
               onClick={() => {
                 activeStatus(3);
+                settoggleHam(!toggleHam);
               }}
               to="/projects"
             >
@@ -103,6 +114,7 @@ function App() {
               className={`Active ${active === 4 ? " act" : ""}`}
               onClick={() => {
                 activeStatus(4);
+                settoggleHam(!toggleHam);
               }}
               to="/contact"
             >

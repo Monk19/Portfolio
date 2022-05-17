@@ -100,11 +100,14 @@ h2 {
   left: 0px;
   right: 0px;
 }
+/* h3#x li {
+  text-shadow: 3px 10px 10px greenyellow !important;
+} */
 @media screen and (max-width: 768px) {
   .experience {
     display: flex;
     flex-direction: column;
-    height: 230vh;
+    height: 195vh;
     width: 100vw;
     flex-wrap: wrap;
   }
@@ -119,7 +122,6 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 70vh;
   }
 
   .progress-grid > div > div {

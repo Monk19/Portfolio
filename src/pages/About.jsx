@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./About.modules.css";
 import axios from "axios";
-const words = [
-  "Hello",
-  "My Name is Ravi and I am a WebDeveloper Welcome to my page",
-];
+const words = ["Hello", "I am Ravi and I am a WebDeveloper Welcome to my page"];
 
 export const About = (props) => {
   const [index, setIndex] = useState(0);
@@ -54,7 +51,7 @@ export const About = (props) => {
   let [bottom, setBottom] = useState(0);
   let [change, setChange] = useState(true);
   let [w, h] = [window.innerWidth, window.innerHeight];
-  console.log(w, h);
+  
   const runChange = () => {
     console.log("clicked");
 
@@ -76,7 +73,7 @@ export const About = (props) => {
               : ""}
           </h1>
         </div>
-        <div className="social-icons">
+        <div className="social-iconss">
           <i className="fab fa-linkedin"></i>
           <i className="fab fa-github"></i>
           <i class="fas fa-envelope"></i> <i class="fab fa-instagram"></i>

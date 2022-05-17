@@ -4,11 +4,7 @@ div.projects-component {
   width: 100vw;
   height: 100vh;
 }
-h1 {
-  margin-top: 35px;
-  width: 400px;
-  text-align: center;
-}
+
 
 .project-menu {
   display: flex;
