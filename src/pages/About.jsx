@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./About.modules.css";
 import axios from "axios";
-const words = ["Hello", "I am Ravi and I am a WebDeveloper Welcome to my page"];
+const words = [
+  "Hello",
+  "My name is Ravi and I am a WebDeveloper based in hydrabad",
+];
 
 export const About = (props) => {
   const [index, setIndex] = useState(0);
@@ -51,7 +54,7 @@ export const About = (props) => {
   let [bottom, setBottom] = useState(0);
   let [change, setChange] = useState(true);
   let [w, h] = [window.innerWidth, window.innerHeight];
-  
+
   const runChange = () => {
     console.log("clicked");
 
