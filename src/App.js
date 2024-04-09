@@ -7,6 +7,7 @@ import Experience from "./pages/Experience";
 import useLocalStorage from "use-local-storage";
 import Projects from "./pages/ProjectsComponent/Projects";
 import Contact from "./pages/Contact/Contact";
+import Blogs from "./pages/Blogs/Blogs";
 function App() {
   const [active, setActive] = useState(1);
   const [toggleHam, settoggleHam] = useState(false);
@@ -73,7 +74,7 @@ function App() {
           checked={toggleHam}
           onClick={() => {
             settoggleHam(!toggleHam);
-          }} 
+          }}
         />
         <div className="hamburger">
           <div></div>
@@ -120,6 +121,17 @@ function App() {
             >
               Contat Me
             </Link>
+
+            <Link
+              className={`Active ${active === 5 ? " act" : ""}`}
+              onClick={() => {
+                activeStatus(5);
+                settoggleHam(!toggleHam);
+              }}
+              to="/blog"
+            >
+              blog
+            </Link>
           </div>
           {/* <div className="darMode">
             {theme === "light" ? (
@@ -145,6 +157,7 @@ function App() {
         <Route path="/experience" element={<Experience animate={true} />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blogs />} />
       </Routes>
     </div>
   );

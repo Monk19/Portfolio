@@ -18,7 +18,7 @@ i::before {
   /* text-align: ; */
 }
 h1 {
-  font-size: 30px;
+  font-size: 2rem;
   /* color: var(--WhiteHeading); */
   letter-spacing: 5px;
   text-align: left;
