@@ -158,6 +158,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blogs />} />
+	<Route path="/news Letter element={<Blogs/>}/>
       </Routes>
     </div>
   );
